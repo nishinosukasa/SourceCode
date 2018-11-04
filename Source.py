@@ -28,14 +28,14 @@ print ('''
 ''')
 target = raw_input('http://: ')
 try:
-    bukaurl = urllib.urlopen(target)
-    baca = openurl.read()
-except:
+    openurl = urllib.urlopen(url)
+    read = openurl.read()
+except IOError:
     print '\033[91mCheck Connection Internet. With Protocol http dont https'
     input("press enter to exit ...")
 print '\033[92mSource Code Successful Save...'
 file_save = open('codename.html', 'w')
-file_save.write(baca)
+file_save.write(read)
 print '\033[93mSource Code Save as codename.html'
 def mengetik(s):
     for c in s + '\n':
