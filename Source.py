@@ -28,7 +28,7 @@ print ('''
 ''')
 target = raw_input('http://: ')
 try:
-    openurl = urllib.urlopen(url)
+    openurl = urllib.urlopen(target)
     read = openurl.read()
 except IOError:
     print '\033[91mCheck Connection Internet. With Protocol http dont https'
